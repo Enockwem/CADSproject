@@ -4,13 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Handler;
-import android.widget.TableLayout;
 
 import com.google.android.material.tabs.TabLayout;
+
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -22,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById (R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // Setting the tablayout in the main activity
+        // Setting the tab layout in the main activity
         TabLayout tabLayout = (TabLayout) findViewById (R.id.tablayout);
         tabLayout.addTab (tabLayout.newTab ().setText (R.string.leader_text));
         tabLayout.addTab (tabLayout.newTab ().setText (R.string.skill_iq));
@@ -52,5 +50,6 @@ public class MainActivity extends AppCompatActivity {
             public void onTabReselected (TabLayout.Tab tab) {
             }
         });
+
     }
 }
