@@ -6,6 +6,7 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 
 public interface Getdata {
+    String BASE_URL = "https://gadsapi.herokuapp.com/";
     // This is the request type and  my relative URL /api/hours
     // Wrapping the response in a call object with the type of the expected result
     @GET("/api/hours")

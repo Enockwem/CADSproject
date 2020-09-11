@@ -18,6 +18,12 @@ public class LearningLeaders {
     private String country;
     @SerializedName ("learningHours")
     private String learningHours;
+    @SerializedName ("TotalPoint")
+    private int TotalPoint;
+    @SerializedName ("collaboration_points")
+    private int collaboration_points;
+    @SerializedName ("skill_score")
+    private int skill_score;
 
     public LearningLeaders(int rank,String name,String country, String learningHours){
         this.rank = rank;

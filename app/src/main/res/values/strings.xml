@@ -4,4 +4,17 @@
     <string name="button_submit">Submit</string>
     <string name="leader_text">Learning Leaders</string>
     <string name="skill_iq">Skill IQ Leaders</string>
+    <string name="enter_first_name">First Name</string>
+    <string name="enter_last_name">Last Name</string>
+    <string name="enter_email">Email Address</string>
+    <string name="enter_github_link">Project on GITHUB(link)</string>
+    <string name="project_submit">Submit</string>
+    <string name="submit_project">Project Submission</string>
+    <string name="accepted_text">Submission Successful</string>
+    <string name="error_occured">Submission not Successful</string>
+    <string name="agree_message">Are you sure</string>
+    <string name="agree_btn">Yes</string>
+    <string name="question_mark">"?"</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
 </resources>

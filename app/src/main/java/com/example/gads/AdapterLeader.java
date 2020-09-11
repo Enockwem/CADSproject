@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,17 +14,21 @@ import java.util.List;
 
 public class AdapterLeader extends RecyclerView.Adapter<AdapterLeader.ViewHolder> {
     private List<LearningLeaders> learningLeaders;
+    Context mContext;
 
-    // Using involues inflating a layout from xml and returning the holder
+    public AdapterLeader(Context context, List<LearningLeaders> learningLeaders){
+        this.mContext = context;
+        this.learningLeaders = learningLeaders;
+    }
+    // Using involves inflating a layout from xml and returning the holder
     @NonNull
     @Override
     public AdapterLeader.ViewHolder onCreateViewHolder (@NonNull ViewGroup parent, int viewType) {
-        Context context = parent.getContext ();
-        LayoutInflater inflater = LayoutInflater.from (context);
+        // Context context = parent.getContext ();
+        // LayoutInflater inflater = LayoutInflater.from (context);
 
         // Inflate the custom layout
-        View leaderView = inflater.inflate (R.layout.row_leader, parent,false);
-
+        View leaderView= LayoutInflater.from (mContext).inflate (R.layout.row_leader, parent,false);
         // Return a new holder instance
         ViewHolder viewHolder = new ViewHolder (leaderView);
         return viewHolder;
@@ -52,6 +57,7 @@ public class AdapterLeader extends RecyclerView.Adapter<AdapterLeader.ViewHolder
     public static class ViewHolder extends RecyclerView.ViewHolder{
         private TextView textName;
         private TextView texthours_and_country;
+        private ImageView showImage;
 
         public ViewHolder(View itemView){
             super(itemView);
@@ -59,9 +65,5 @@ public class AdapterLeader extends RecyclerView.Adapter<AdapterLeader.ViewHolder
             textName = (TextView) itemView.findViewById (R.id.textLeader);
             texthours_and_country = (TextView) itemView.findViewById (R.id.hours_and_country);
         }
-    }
-
-    public AdapterLeader(List<LearningLeaders> learningLeaders1){
-        learningLeaders = learningLeaders1;
     }
 }
